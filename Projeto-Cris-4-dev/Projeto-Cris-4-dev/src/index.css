@@ -1,0 +1,79 @@
+/* Adicionando fontes usadas para textos */
+
+@font-face {
+    font-family: "PoppinsMedium";
+    src: url(../src/assets/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "PoppinsBold";
+    src: url(../src/assets/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "PoppinsSemiBold";
+    src: url(../src/assets/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "PoppinsExtraBold";
+    src: url(../src/assets/Poppins-ExtraBold.ttf);
+}
+
+/* Cores Padrões do Site */
+:root {
+    font-family: "PoppinsMedium";
+    --history: #fffff0;
+    --background-color: #22b9e2;
+    --message-cris: #2b73AD;
+    --message-user: #23b9e2;
+    --button-color: #FFFFFF;
+    --background-button-darkmode: #ececec;
+    --ball-darkmode: #256394;
+    --border-darkmode-color: #ececec;
+    --input-color: #ececec;
+    --input-button-color: #FDB914;
+    --input-button-color-hover: #27b3ad;
+    --answer-list-color: #ffbd13;
+    --primary-text-answer-list-color: #F6D000;
+    --status-color: #000000;
+}
+
+/* Cores Darkmode do Site */
+.darkmode:root {
+    font-family: "PoppinsMedium";
+    --history: #242020;
+    --background-color: #262d32;
+    --message-cris: #464646;
+    --message-user: #2b73ad;
+    --button-color: #2b73ad;
+    --background-button-darkmode: #ececec;
+    --ball-darkmode: #256394;
+    --border-darkmode-color: #fffff0;
+    --input-color: #ececec;
+    --input-button-color: #2b73ad;
+    --input-button-color-hover: #27b3ad;
+    --answer-list-color: #1c4a70;
+    --primary-text-answer-list-color: #2b73ad;
+    --status-color: #fffff0;
+}
+
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--history);
+    height: 100%;
+}
+
+/* Status, assim que você enviar uma mensagem a tela vai carregar para perguntar para a API */
+
+#status {
+    text-align: center;
+    font-weight: 500;
+    font-size: larger;
+    color: var(--status-color);
+}

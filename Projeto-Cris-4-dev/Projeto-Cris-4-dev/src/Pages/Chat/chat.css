@@ -1,0 +1,369 @@
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--history);
+    height: 100%;
+} 
+
+/* Ínicio das configurações do Menu Hamburguer, as três listrinhas */
+.icon {
+    position: absolute;
+    top: 16px;
+    z-index: 5;
+    left: 1%;
+    width: 30px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.hamburguer {
+    top: 40%;
+    left: 10%;
+    width: 30px;
+    height: 6px;
+    background-color: var(--button-color);
+    position: absolute;
+    border-radius: 2px;
+    transition: 0s;
+}
+
+.hamburguer:before {
+    top: -10px;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 6px;
+    background-color: var(--button-color);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.hamburguer:after {
+    top: 10px;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 6px;
+    background-color: var(--button-color);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.icon.iconActive .hamburguer {
+    background: transparent;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px transparent;
+    border-radius: 2px;
+}
+
+.icon.iconActive .hamburguer:after {
+    top: 0;
+    background: transparent;
+    background-color: #ff3300;
+    transform: rotate(225deg);
+    border-radius: 2px;
+}
+
+.icon.iconActive .hamburguer:before {
+    top: 0;
+    background: transparent;
+    background-color: #ff3300;
+    transform: rotate(135deg);
+    border-radius: 2px;
+}
+
+/* Quando o Menu Hamburger está ativado, ele abre um Menu lateral, aqui estão as configurações do menu lateral */
+.menu.menuOpen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 0;
+    margin-top: 0.5rem;
+    top: 9%; 
+    width: 23%;
+    height: 100%;
+    z-index: 4;
+    background-color: var(--background-color);
+    transition: 1s;
+}
+
+.menu.menuClose {
+    visibility: hidden;
+    position: absolute;
+    margin: 0;
+    margin-top: 0.5rem;
+    top: 9%;
+    width: 23%;
+    height: 100%;
+    z-index: 4;
+    transform: translateX(-100%);
+    transition: 1s;
+}
+
+/* Configurações do Botão de Ativar o DarkMode */
+.darkmodeButton {
+    width: 100% !important;
+    display: flex;
+    justify-content: end;
+}
+
+.darkmodeButton .MuiFormGroup-root {
+    margin: 0;
+}
+
+.darkmodeButton .MuiFormControlLabel-root {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0;
+}
+
+.darkmodeButton .MuiSwitch-root {
+    margin-left: 0;
+}
+
+
+/* Texto escrito "Perguntas Frequentes" */
+.perguntasFrequentes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50%;
+    color: #FFF;
+    align-items: center;
+    transition: 0s;
+}
+
+/* Lista das Perguntas Frequentes */
+.perguntasFrequentes #listaDasPerguntas {
+    display: flex;
+}
+
+.perguntasFrequentes #textoPrimário {
+    font-family: "PoppinsExtraBold";
+    padding: 5px;
+    margin-bottom: 20px;
+    border: var(--primary-text-answer-list-color) 2px solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    background-color: var(--background-color);
+
+}
+
+.perguntasFrequentes #listaDasPerguntas ul {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.perguntasFrequentes #listaDasPerguntas ul button {
+    display: flex;
+    justify-content: center;
+    font-family: "PoppinsBold";
+    color: #FFF;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    width: 90%;
+    border-radius: 3px;
+    border: 0;
+    background-color: var(--answer-list-color);
+
+}
+
+.perguntasFrequentes #listaDasPerguntas ul button:hover {
+    cursor: pointer;
+    background-color: var(--background-button-darkmode);
+
+}
+
+/* Configurações do Histórico de conversa */
+.historyNormal {
+    display: flex;
+    height: 90%;
+    width: 100%;
+}
+
+/* Configuração da Div que segura as mensagens, e também as configurações da barra de rolagem */
+#message {
+    display: flex;  
+    flex: 1 1 0%;
+    margin-bottom: 4.5rem;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: var(--background-color);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: #666;
+    -webkit-border-radius: 6px;
+}
+
+/* Balão de mensagens do Usuário */
+
+.historyNormal #message .sectionUser {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    margin-left: 29%;
+    max-width: 100%;
+    margin-right: 7%;
+    margin-top: 10px;
+}
+
+p#user {
+    display: flex;
+    font-family: "PoppinsMedium";
+    color: #FFF;
+    border-radius: 10px 10px;
+    text-align: justify;
+    padding: 15px 15px;
+    background-color: var(--message-user);
+}
+
+
+/* Balão de mensagens do ChatBot */
+
+.historyNormal #message .sectionCris {
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
+    max-width: 100%;
+    margin-right: 7%;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+p#cris {
+    display: flex;
+    font-family: "PoppinsMedium";
+    color: #FFF;
+    border-radius: 10px 10px;
+    text-align: justify;
+    padding: 15px 15px;
+    background-color: var(--message-cris);
+}
+
+.historyNormal #message .sectionCris div {
+    display: flex;
+    align-self: start;
+    padding: 4px;
+}
+
+.historyNormal #message img {
+    align-self: center;
+    border: 0;
+    background-color: var(--history);
+}
+
+/* Status, assim que você enviar uma mensagem a tela vai carregar para perguntar para a API */
+
+#status {
+    text-align: center;
+    font-weight: 500;
+    font-size: larger;
+    color: var(--status-color);
+}
+
+/* Tela cheia */
+/* Configurações do Histórico de conversa */
+
+.historyFull {
+    display: flex;
+    position: relative;
+    height: 90%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    border-color: var(--border-darkmode-color);
+    border: 2px;
+}
+
+/* Tela cheia */
+/* Configuração da Div que segura as mensagens, e também as configurações da barra de rolagem */
+.historyFull #message {
+    display: flex;
+    flex: 1 1 0%;
+    max-width: 100%;
+    margin-bottom: 4.5rem;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.historyFull ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.historyFull ::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: none;
+}
+
+.historyFull ::-webkit-scrollbar-track-piece {
+    background-color: var(--background-color);
+    -webkit-border-radius: 6px;
+}
+
+.historyFull ::-webkit-scrollbar-thumb:vertical {
+    background-color: #666;
+    -webkit-border-radius: 6px;
+}
+
+/* Tela cheia */
+/* Balão de mensagens do Usuário Quando o chat ta em tela cheia */
+
+.historyFull #message .sectionUser {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    margin-left: 9%;
+    max-width: 100%;
+    margin-right: 7%;
+    margin-top: 10px;
+}
+
+/* Tela cheia */
+/* Balão de mensagens do ChatBot Quando o chat ta em tela cheia */
+
+.historyFull #message .sectionCris {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    max-width: 100%;
+    margin-right: 7%;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.historyFull #message .sectionCris div {
+    display: flex;
+    align-self: start;
+    padding: 4px;
+}
+
+.historyFull #message img {
+    align-self: center;
+    border: 0;
+    background-color: var(--history);
+}

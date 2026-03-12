@@ -1,0 +1,94 @@
+/* Balão de mensagens do Usuário */
+
+.historyNormal #message .sectionUser {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    margin-left: 29%;
+    max-width: 100%;
+    margin-right: 7%;
+    margin-top: 10px;
+}
+
+p#user {
+    display: flex;
+    font-family: "PoppinsMedium";
+    color: #FFF;
+    border-radius: 10px 10px;
+    text-align: justify;
+    padding: 15px 15px;
+    background-color: var(--message-user);
+}
+
+
+/* Balão de mensagens do ChatBot */
+
+.historyNormal #message .sectionCris {
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
+    max-width: 100%;
+    margin-right: 7%;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+p#cris {
+    display: flex;
+    font-family: "PoppinsMedium";
+    color: #FFF;
+    border-radius: 10px 10px;
+    text-align: justify;
+    padding: 15px 15px;
+    background-color: var(--message-cris);
+}
+
+.historyNormal #message .sectionCris div {
+    display: flex;
+    align-self: start;
+    padding: 4px;
+}
+
+.historyNormal #message img {
+    align-self: center;
+    border: 0;
+    background-color: var(--history);
+}
+
+/* Tela cheia */
+/* Balão de mensagens do Usuário Quando o chat ta em tela cheia */
+
+.historyFull #message .sectionUser {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    margin-left: 9%;
+    max-width: 100%;
+    margin-right: 7%;
+    margin-top: 10px;
+}
+
+/* Tela cheia */
+/* Balão de mensagens do ChatBot Quando o chat ta em tela cheia */
+
+.historyFull #message .sectionCris {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    max-width: 100%;
+    margin-right: 7%;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.historyFull #message .sectionCris div {
+    display: flex;
+    align-self: start;
+    padding: 4px;
+}
+
+.historyFull #message img {
+    align-self: center;
+    border: 0;
+    background-color: var(--history);
+}
