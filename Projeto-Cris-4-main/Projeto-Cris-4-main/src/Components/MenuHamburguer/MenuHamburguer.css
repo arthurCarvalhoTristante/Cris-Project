@@ -1,0 +1,385 @@
+/* Ínicio das configurações do Menu Hamburguer, as três listrinhas */
+.icon {
+    position: absolute;
+    top: 22px;
+    z-index: 5;
+    left: 1%;
+    width: 40px;
+    height: 58.652px;
+    cursor: pointer;
+}
+
+.hamburguer {
+    top: 40%;
+    left: 10%;
+    width: 40px;
+    height: 7.5px;
+    background-color: var(--button-color);
+    position: absolute;
+    border-radius: 2px;
+    transition: 0s;
+}
+
+.hamburguer:before {
+    top: -11px;
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 7.5px;
+    background-color: var(--button-color);
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+.hamburguer:after {
+    top: 11px;
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 7.5px;
+    background-color: var(--button-color);
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+.icon.iconActive .hamburguer {
+    background: transparent;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px transparent;
+    border-radius: 2px;
+}
+
+.icon.iconActive .hamburguer:after {
+    top: 0;
+    background: transparent;
+    background-color: #ff3300;
+    transform: rotate(225deg);
+    border-radius: 2px;
+}
+
+.icon.iconActive .hamburguer:before {
+    top: 0;
+    background: transparent;
+    background-color: #ff3300;
+    transform: rotate(135deg);
+    border-radius: 2px;
+}
+
+/* Quando o Menu Hamburger está ativado, ele abre um Menu lateral, aqui estão as configurações do menu lateral */
+.menu.menuOpen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 0;
+    margin-top: 0.5rem;
+    top: 9%;
+    width: 23%;
+    height: 100%;
+    z-index: 4;
+    background-color: var(--background-color);
+    transition: 0.2s;
+}
+
+.menu.menuClose {
+    visibility: hidden;
+    position: absolute;
+    margin: 0;
+    margin-top: 0.5rem;
+    top: 9%;
+    width: 23%;
+    height: 100%;
+    z-index: 4;
+    transform: translateX(-100%);
+    transition: 0.2s;
+}
+
+/* Configurações do Botão de Ativar o DarkMode */
+.darkmodeButton {
+    width: 100% !important;
+    display: flex;
+    justify-content: end;
+}
+
+.darkmodeButton .MuiFormGroup-root {
+    margin: 0;
+}
+
+.darkmodeButton .MuiFormControlLabel-root {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0;
+}
+
+.darkmodeButton .MuiSwitch-root {
+    margin-left: 0;
+}
+
+
+/* Texto escrito "Perguntas Frequentes" */
+.perguntasFrequentes {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    color: #FFF;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 10rem;
+}
+
+/* Lista das Perguntas Frequentes */
+
+.perguntasFrequentes #textoPrimário {
+    display: flex;
+    font-family: "PoppinsExtraBold";
+    font-size: x-large;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-bottom: var(--primary-text-answer-list-color) 2px solid;
+    background-color: var(--background-color);
+}
+
+.perguntasFrequentes #listaDasPerguntas {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.perguntasFrequentes #listaDasPerguntas ul {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding: 0;
+    flex-direction: column;
+}
+
+.perguntasFrequentes #listaDasPerguntas ul button {
+    display: flex;
+    justify-content: center;
+    font-family: "PoppinsBold";
+    font-size: large;
+    color: #FFF;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    width: 100%;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--answer-list-color);
+
+}
+
+.perguntasFrequentes #listaDasPerguntas ul button:hover {
+    cursor: pointer;
+    background-color: var(--input-button-color-hover);
+
+}
+
+@media only screen and (max-width: 725px) {
+
+    /* Configurações CSS para Desabilitar MenuHamburguer quando a tela for diminuida */ 
+
+    .icon {
+        visibility: hidden;
+    }
+
+    .menu {
+        visibility: hidden;
+    }
+
+    .menu.menuOpen {
+        visibility: hidden;
+        position: absolute;
+        margin: 0;
+        margin-top: 0.5rem;
+        top: 9%;
+        width: 23%;
+        height: 100%;
+        z-index: 4;
+        transform: translateX(-100%);
+        transition: 0.2s !important;
+    }
+
+    .menu.menuClose {
+        transition: 0.2s !important;
+    }
+}
+
+@media only screen and (max-height: 900px) {
+
+    /* Configurações CSS Telas Menores */
+
+    /* Ínicio das configurações do Menu Hamburguer, as três listrinhas */
+    .icon {
+        position: absolute;
+        top: 16px;
+        z-index: 5;
+        left: 1%;
+        width: 30px;
+        height: 44px;
+        cursor: pointer;
+    }
+
+    .hamburguer {
+        top: 40%;
+        left: 10%;
+        width: 30px;
+        height: 6px;
+        background-color: var(--button-color);
+        position: absolute;
+        border-radius: 2px;
+        transition: 0s;
+    }
+
+    .hamburguer:before {
+        top: -10px;
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 6px;
+        background-color: var(--button-color);
+        border-radius: 2px;
+        transition: 0.2s;
+    }
+
+    .hamburguer:after {
+        top: 10px;
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 6px;
+        background-color: var(--button-color);
+        border-radius: 2px;
+        transition: 0.2s;
+    }
+
+    .icon.iconActive .hamburguer {
+        background: transparent;
+        background-color: var(--background-color);
+        box-shadow: 0 2px 5px transparent;
+        border-radius: 2px;
+    }
+
+    .icon.iconActive .hamburguer:after {
+        top: 0;
+        background: transparent;
+        background-color: #ff3300;
+        transform: rotate(225deg);
+        border-radius: 2px;
+    }
+
+    .icon.iconActive .hamburguer:before {
+        top: 0;
+        background: transparent;
+        background-color: #ff3300;
+        transform: rotate(135deg);
+        border-radius: 2px;
+    }
+
+    /* Quando o Menu Hamburger está ativado, ele abre um Menu lateral, aqui estão as configurações do menu lateral */
+    .menu.menuOpen {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin: 0;
+        margin-top: 0.5rem;
+        top: 9%;
+        width: 23%;
+        height: 100%;
+        z-index: 4;
+        background-color: var(--background-color);
+        transition: 0.2s;
+    }
+
+    .menu.menuClose {
+        visibility: hidden;
+        position: absolute;
+        margin: 0;
+        margin-top: 0.5rem;
+        top: 9%;
+        width: 23%;
+        height: 100%;
+        z-index: 4;
+        transform: translateX(-100%);
+        transition: 0.2s;
+    }
+
+    /* Configurações do Botão de Ativar o DarkMode */
+    .darkmodeButton {
+        width: 100% !important;
+        display: flex;
+        justify-content: end;
+    }
+
+    .darkmodeButton .MuiFormGroup-root {
+        margin: 0;
+    }
+
+    .darkmodeButton .MuiFormControlLabel-root {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin: 0;
+    }
+
+    .darkmodeButton .MuiSwitch-root {
+        margin-left: 0;
+    }
+
+
+    /* Texto escrito "Perguntas Frequentes" */
+    .perguntasFrequentes {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        color: #FFF;
+        align-items: center;
+        justify-content: end;
+        margin-bottom: 6rem;
+    }
+
+    /* Lista das Perguntas Frequentes */
+
+    .perguntasFrequentes #textoPrimário {
+        font-family: "PoppinsExtraBold";
+        font-size: large;
+        padding: 5px;
+        margin-bottom: 20px;
+        border-bottom: var(--primary-text-answer-list-color) 2px solid;
+        background-color: var(--background-color);
+
+    }
+
+    .perguntasFrequentes #listaDasPerguntas {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .perguntasFrequentes #listaDasPerguntas ul {
+        display: flex;
+        width: 90%;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .perguntasFrequentes #listaDasPerguntas ul button {
+        display: flex;
+        justify-content: center;
+        font-family: "PoppinsBold";
+        font-size: small;
+        color: #FFF;
+        margin-bottom: 10px;
+        padding: 10px 5px;
+        width: 90%;
+        border-radius: 3px;
+        border: 0;
+        background-color: var(--answer-list-color);
+
+    }
+
+    .perguntasFrequentes #listaDasPerguntas ul button:hover {
+        cursor: pointer;
+        background-color: var(--input-button-color-hover);
+
+    }
+}

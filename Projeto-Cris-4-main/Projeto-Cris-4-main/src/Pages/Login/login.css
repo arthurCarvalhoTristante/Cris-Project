@@ -1,0 +1,688 @@
+@keyframes showleft {
+    from {
+        transform: translateX(-70%) rotate(-25deg);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes showright {
+    from {
+        transform: translateX(70%) rotate(25deg);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes eyepass {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateY(-25%);
+    }
+}
+
+@keyframes hiddeleft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-70%) rotate(-25deg);
+    }
+}
+
+@keyframes hidderight {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(70%) rotate(25deg);
+    }
+}
+
+@keyframes showlogo {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes keyframes-fill {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+body {
+    height: auto;
+    width: auto;
+}
+
+h1 {
+    color: #fffff0;
+}
+
+.styles {
+    background: var(--background-color);
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    font-family: "PoppinsMedium";
+}
+
+.container {
+    display: flex;
+    align-self: center;
+    margin-right: 22%;
+}
+
+.box_login {
+    display: flex;
+    align-content: center;
+    z-index: 5;
+}
+
+.cabecalho {
+    height: 15.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background: none;
+}
+
+.cabecalho h1 {
+    align-self: center;
+    z-index: 5;
+    font-size: 3.25rem;
+}
+
+.marca {
+    display: flex;
+    position: absolute;
+    z-index: 4;
+    bottom: 0%;
+    flex: 2 2 0%;
+    height: 50%;
+}
+
+.hands {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    position: absolute;
+    z-index: auto;
+    height: auto;
+    width: auto !important;
+}
+
+.image_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 11.7rem;
+    width: 11.7rem;
+    padding-bottom: 4.375rem;
+    animation: showlogo 1s ease-in;
+}
+
+.image_logo #left_eye {
+    transition: 1s;
+}
+
+.image_logo #right_eye {
+    transition: 1s;
+}
+
+.left_hand {
+    position: absolute;
+    width: 5.85rem;
+    padding-right: 50%;
+    padding-top: 40%;
+    animation: showleft 0.5s ease-in;
+}
+
+.left_hand2 {
+    visibility: hidden;
+    display: flex;
+    height: 0;
+    width: 0;
+    transition: 0.3s;
+    transform: translateX(-70%) rotate(-25deg);
+}
+
+.right_hand {
+    position: absolute;
+    width: 5.85rem;
+    padding-left: 50%;
+    padding-top: 40%;
+    animation: showright 0.5s ease-in;
+}
+
+.right_hand2 {
+    visibility: hidden;
+    display: flex;
+    height: 0;
+    width: 0;
+    transition: 0.3s;
+    transform: translateX(70%) rotate(25deg);
+}
+
+.right_hand3 {
+    padding-top: 25%;
+    transition: .3s;
+}
+
+.area {
+    display: flex;
+    width: 100%;
+
+}
+
+.img_1,
+.img_2,
+.img_3,
+.img_0 {
+    display: flex;
+    position: absolute;
+}
+
+.img_1 {
+    height: 100%;
+    transition: 1s;
+}
+
+.img_2 {
+    height: 100%;
+    transition: 1s;
+}
+
+.img_3 {
+    height: 100%;
+    transition: 1s;
+}
+
+.img_0 {
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.cris_titulo {
+    position: absolute;
+    z-index: 5;
+    color: White;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 3rem;
+    transition: 1s;
+}
+
+.cris_titulo .box h2 {
+    font-size: 5rem;
+    margin-left: -30px;
+    margin-bottom: -2rem;
+    font-family: "PoppinsSemiBold";
+
+}
+
+.cris_titulo .box h3 {
+    font-size: 2.5rem;
+    font-family: "PoppinsMedium";
+    letter-spacing: 9px;
+    line-height: 96px;
+    font-weight: 5;
+
+}
+
+
+.form_login {
+    padding: 5% 0 5% 0;
+}
+
+.camp_email,
+.camp_senha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 0 5% 0;
+    background-color: var(--answer-list-color);
+    border-radius: 8px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.icon_email,
+.icon_senha {
+    background-color: var(--answer-list-color);
+    color: #374957;
+    height: 100%;
+    width: 1.95rem;
+    padding: 2.6px 13px 0 13px;
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+
+.camp_email input {
+    background-color: var(--answer-list-color);
+    font-family: 'PoppinsSemiBold';
+    font-size: medium;
+    color: #464646;
+    border: none;
+    height: 3.64rem;
+    width: 19.5rem;
+    border-radius: 0 8px 8px 0;
+    padding-left: 10px;
+    padding-right: 40px;
+    border-left-width: 2px;
+    outline: none;
+}
+
+.camp_senha input {
+    background-color: var(--answer-list-color);
+    font-family: 'PoppinsSemiBold';
+    font-size: medium;
+    color: #464646;
+    border: none;
+    height: 3.64rem;
+    width: 19.5rem;
+    border-radius: 0 8px 8px 0;
+    padding-left: 10px;
+    outline: none;
+}
+
+.camp_email input::placeholder,
+.camp_senha input::placeholder {
+    font-family: 'PoppinsRegular';
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.svg_eye_password {
+    position: relative;
+    margin-top: 6px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.svg_eye_password input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 39px;
+    width: 30px;
+}
+
+.eye_pass {
+    animation: keyframes-fill .5s;
+    display: none;
+}
+
+.eye_pass_slash {
+    animation: keyframes-fill .5s;
+    display: block;
+}
+
+.svg_eye_password input:checked~.eye_pass {
+    display: block;
+}
+
+.svg_eye_password input:checked~.eye_pass_slash {
+    display: none;
+}
+
+.submit_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit_login input {
+    width: 18.2rem;
+    height: 3.9rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--ball-darkmode);
+    color: white;
+    cursor: pointer;
+    font-family: "PoppinsSemiBold";
+    font-size: 1.95rem;
+    text-shadow: 0px 2px 8px black;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+@media only screen and (max-width: 1110px) {
+
+    .box {
+        visibility: hidden;
+        transition: 0.3s;
+        transform: translateX(-100%);
+    }
+
+    .img_1 {
+        visibility: hidden;
+        transition: 0.3s;
+        transform: translateX(-100%);
+    }
+
+    .img_2 {
+        visibility: hidden;
+        transition: 0.3s;
+        transform: translateX(-100%);
+    }
+
+    .img_3 {
+        visibility: hidden;
+        transition: 0.3s;
+        transform: translateX(-100%);
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    .styles {
+        background: var(--background-color);
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
+        font-family: "PoppinsMedium";
+    }
+
+    .container {
+        display: flex;
+        align-self: center;
+        margin-right: 22%;
+    }
+
+    .box_login {
+        display: flex;
+        align-content: center;
+        z-index: 5;
+    }
+
+    .cabecalho {
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        background: none;
+    }
+
+    .cabecalho h1 {
+        align-self: center;
+        z-index: 5;
+        font-size: 2.25rem;
+    }
+
+    .marca {
+        display: flex;
+        position: absolute;
+        z-index: 4;
+        bottom: 0%;
+        flex: 2 2 0%;
+        height: 50%;
+    }
+
+    .hands {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        z-index: auto;
+        height: auto;
+        width: auto !important;
+    }
+
+    .image_logo {
+        display: flex;
+        justify-content: center;
+        height: 9rem;
+        width: 9rem;
+        animation: showlogo 1s ease-in;
+    }
+
+    .image_logo #left_eye {
+        transition: 1s;
+    }
+
+    .image_logo #right_eye {
+        transition: 1s;
+    }
+
+    .left_hand {
+        position: absolute;
+        width: 4.5rem;
+        padding-right: 47%;
+        padding-top: 55%;
+        animation: showleft 0.5s ease-out;
+    }
+
+    .left_hand2 {
+        visibility: hidden;
+        display: flex;
+    }
+
+    .right_hand {
+        position: absolute;
+        width: 4.5rem;
+        padding-left: 47%;
+        padding-top: 55%;
+        animation: showright 0.5s ease-out;
+    }
+
+    .right_hand2 {
+        visibility: hidden;
+        display: flex;
+    }
+
+    .right_hand3 {
+        padding-top: 40% !important;
+        transition: .3s;
+    }
+
+    .area {
+        display: flex;
+        width: 100%;
+
+    }
+
+    .img_1,
+    .img_2,
+    .img_3,
+    .img_0 {
+        display: flex;
+        position: absolute;
+    }
+
+    .img_1 {
+        height: 100%;
+    }
+
+    .img_2 {
+        height: 100%;
+    }
+
+    .img_3 {
+        height: 100%;
+    }
+
+    .img_0 {
+        justify-content: flex-end;
+        align-items: end;
+    }
+
+    .cris_titulo {
+        position: absolute;
+        z-index: 5;
+        color: White;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+
+
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 3rem;
+    }
+
+    .cris_titulo .box h2 {
+        font-size: 3.5rem;
+        margin-left: -30px;
+        margin-bottom: -2rem;
+        font-family: "PoppinsSemiBold";
+
+    }
+
+    .cris_titulo .box h3 {
+        font-size: 1.5rem;
+        font-family: "PoppinsMedium";
+        letter-spacing: 9px;
+        line-height: 96px;
+        font-weight: 5;
+
+    }
+
+
+    .form_login {
+        padding: 5% 0 5% 0;
+    }
+
+    .camp_email,
+    .camp_senha {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2% 0 5% 0;
+        background-color: var(--answer-list-color);
+        border-radius: 8px;
+        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .icon_email,
+    .icon_senha {
+        background-color: var(--answer-list-color);
+        color: #374957;
+        height: 100%;
+        width: 1.95rem;
+        padding: 2.6px 13px 0 13px;
+        border-right-style: solid;
+        border-right-width: 2px;
+    }
+
+    .camp_email input {
+        background-color: var(--answer-list-color);
+        font-family: 'PoppinsSemiBold';
+        font-size: medium;
+        color: #464646;
+        border: none;
+        height: 3rem;
+        width: 15rem;
+        border-radius: 0 8px 8px 0;
+        padding-left: 10px;
+        padding-right: 40px;
+        border-left-width: 2px;
+        outline: none;
+    }
+
+    .camp_senha input {
+        background-color: var(--answer-list-color);
+        font-family: 'PoppinsSemiBold';
+        font-size: medium;
+        color: #464646;
+        border: none;
+        height: 3rem;
+        width: 15rem;
+        border-radius: 0 8px 8px 0;
+        padding-left: 10px;
+        outline: none;
+    }
+
+    .camp_email input::placeholder,
+    .camp_senha input::placeholder {
+        font-family: 'PoppinsRegular';
+        font-size: 1rem;
+        opacity: 0.5;
+    }
+
+    .svg_eye_password {
+        position: relative;
+        margin-top: 2px;
+        padding-right: 10px;
+        cursor: pointer;
+    }
+
+    .svg_eye_password input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 39px;
+        width: 30px;
+    }
+
+    .eye_pass {
+        animation: keyframes-fill .5s;
+        display: none;
+    }
+
+    .eye_pass_slash {
+        animation: keyframes-fill .5s;
+        display: block;
+    }
+
+    .svg_eye_password input:checked~.eye_pass {
+        display: block;
+    }
+
+    .svg_eye_password input:checked~.eye_pass_slash {
+        display: none;
+    }
+
+    .submit_login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .submit_login input {
+        width: 14rem;
+        height: 3rem;
+        border: none;
+        border-radius: 8px;
+        background-color: var(--ball-darkmode);
+        color: white;
+        cursor: pointer;
+        font-family: "PoppinsSemiBold";
+        font-size: 1.5rem;
+        text-shadow: 0px 2px 8px black;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+    }
+}

@@ -1,0 +1,183 @@
+/* Configurações do Histórico de conversa */
+.historyNormal {
+    display: flex;
+    height: 90%;
+    width: 100%;
+}
+
+/* Configuração da Div que segura as mensagens, e também as configurações da barra de rolagem */
+#message {
+    display: flex;
+    flex: 1 1 0%;
+    margin-bottom: 5.5rem;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: var(--background-color);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: #666;
+    -webkit-border-radius: 6px;
+}
+
+/* Tela cheia */
+/* Configurações do Histórico de conversa */
+
+.historyFull {
+    display: flex;
+    position: relative;
+    height: 90%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    border-color: var(--border-darkmode-color);
+    border: 2px;
+}
+
+/* Tela cheia */
+/* Configuração da Div que segura as mensagens, e também as configurações da barra de rolagem */
+.historyFull #message {
+    display: flex;
+    flex: 1 1 0%;
+    max-width: 100%;
+    margin-bottom: 5.5rem;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.historyFull ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.historyFull ::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: none;
+}
+
+.historyFull ::-webkit-scrollbar-track-piece {
+    background-color: var(--background-color);
+    -webkit-border-radius: 6px;
+}
+
+.historyFull ::-webkit-scrollbar-thumb:vertical {
+    background-color: #666;
+    -webkit-border-radius: 6px;
+}
+
+@media only screen and (max-width: 725px) {
+    .historyNormal {
+        display: flex !important;
+        position: relative !important;
+        height: 90% !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        max-width: 100% !important;
+        border-color: var(--border-darkmode-color) !important;
+        border: 2px !important;
+    }
+
+}
+
+@media only screen and (max-height: 900px) {
+
+    /* Configurações do Histórico de conversa */
+    .historyNormal {
+        display: flex;
+        height: 90%;
+        width: 100%;
+    }
+
+    /* Configuração da Div que segura as mensagens, e também as configurações da barra de rolagem */
+    #message {
+        display: flex;
+        flex: 1 1 0%;
+        margin-bottom: 4.5rem;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+        display: none;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        background-color: var(--background-color);
+        -webkit-border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:vertical {
+        background-color: #666;
+        -webkit-border-radius: 6px;
+    }
+
+    /* Tela cheia */
+    /* Configurações do Histórico de conversa */
+
+    .historyFull {
+        display: flex;
+        position: relative;
+        height: 90%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        max-width: 100%;
+        border-color: var(--border-darkmode-color);
+        border: 2px;
+    }
+
+    /* Tela cheia */
+    /* Configuração da Div que segura as mensagens, e também as configurações da barra de rolagem */
+    .historyFull #message {
+        display: flex;
+        flex: 1 1 0%;
+        max-width: 100%;
+        margin-bottom: 4.5rem;
+        flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .historyFull ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .historyFull ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+        display: none;
+    }
+
+    .historyFull ::-webkit-scrollbar-track-piece {
+        background-color: var(--background-color);
+        -webkit-border-radius: 6px;
+    }
+
+    .historyFull ::-webkit-scrollbar-thumb:vertical {
+        background-color: #666;
+        -webkit-border-radius: 6px;
+    }
+}

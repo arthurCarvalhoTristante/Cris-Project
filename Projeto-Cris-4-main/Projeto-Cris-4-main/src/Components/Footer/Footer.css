@@ -1,0 +1,216 @@
+/* Configurações do Footer */
+
+.footerNormal {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--history);
+    padding: 0.5rem 0rem;
+}
+
+/* Configuração do input de mensagens */
+
+footer input {
+    visibility: visible;
+    font-family: "PoppinsSemiBold";
+    font-size: medium;
+    height: 90%;
+    width: 100%;
+    padding: 0;
+    padding-left: 8px;
+    border: 0;
+    margin-left: 25%;
+    background: var(--input-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    outline: none;
+    transition: 0.2s;
+}
+
+footer input::placeholder {
+    font-family: "PoppinsRegular";
+    font-size: medium;
+}
+
+/* Configuração do Botão de Submit que tem ao lado do input de mensagens no Footer */
+footer #btn-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    height: 90%;
+    min-width: 3.8rem;
+    padding: 2px;
+    margin-left: 15px;
+    margin-right: 3%;
+    border: 0;
+    background: var(--input-button-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+/* Configuração da Imagem do Botão de Submit que tem ao lado do input de mensagens no Footer */
+footer button img {
+    border: 0;
+    width: 2rem;
+    padding-top: 2px;
+    padding-right: 3px;
+}
+
+/* Configuração quando você coloca o mouse encima do Botão de Submit que tem ao lado do input de mensagens no Footer */
+footer #btn-submit:hover {
+    background-color: var(--input-button-color-hover) !important;
+}
+
+/* Configurações do Footer com a tela cheia */
+
+.footerFull {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--history);
+    padding: 0.5rem 0rem;
+}
+
+.footerFull input {
+    visibility: visible;
+    height: 90%;
+    width: 100%;
+    padding: 0;
+    padding-left: 8px;
+    border: 0;
+    margin-left: 5%;
+    background: var(--input-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 725px) {
+    .footerNormal {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        width: 100%;
+        background-color: var(--history);
+        padding: 0.5rem 0rem;
+    }
+
+    .footerNormal input {
+        visibility: visible;
+        height: 90%;
+        width: 100%;
+        padding: 0;
+        padding-left: 8px;
+        border: 0;
+        margin-left: 5%;
+        background: var(--input-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transition: 0.2s;
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    /* Configurações do Footer */
+
+    .footerNormal {
+        visibility: hidden;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        width: 100%;
+        background-color: var(--history);
+        padding: 0.5rem 0rem;
+    }
+
+    /* Configuração do input de mensagens */
+
+    footer input {
+        visibility: visible;
+        font-size: small;
+        height: 90%;
+        width: 100%;
+        padding: 0;
+        padding-left: 8px;
+        border: 0;
+        margin-left: 25%;
+        background: var(--input-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        outline: none;
+        transition: 0.2s;
+    }
+
+    footer input::placeholder {
+        font-size: small;
+    }
+
+    /* Configuração do Botão de Submit que tem ao lado do input de mensagens no Footer */
+    footer #btn-submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: visible;
+        height: 90%;
+        min-width: 3rem;
+        padding: 2px;
+        margin-left: 15px;
+        margin-right: 3%;
+        border: 0;
+        background: var(--input-button-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+    }
+
+    /* Configuração da Imagem do Botão de Submit que tem ao lado do input de mensagens no Footer */
+    footer button img {
+        border: 0;
+        width: 1.5rem;
+        padding-top: 2px;
+        padding-right: 3px;
+    }
+
+    /* Configuração quando você coloca o mouse encima do Botão de Submit que tem ao lado do input de mensagens no Footer */
+    footer #btn-submit:hover {
+        background-color: var(--input-button-color-hover) !important;
+    }
+
+    /* Configurações do Footer com a tela cheia */
+
+    .footerFull {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        width: 100%;
+        background-color: var(--history);
+        padding: 0.5rem 0rem;
+    }
+
+    .footerFull input {
+        visibility: visible;
+        height: 90%;
+        width: 100%;
+        padding: 0;
+        padding-left: 8px;
+        border: 0;
+        margin-left: 5%;
+        background: var(--input-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transition: 0.2s;
+    }
+}
